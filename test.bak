@@ -1,0 +1,4 @@
+#lang racket
+(require plot)
+
+(plot (function λ (x) (* x 2)))

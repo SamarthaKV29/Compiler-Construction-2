@@ -1,0 +1,6 @@
+#lang racket
+(define PI 3.142)
+(define (areaofcircle r)
+  (* (* 2 PI)(* r r)))
+
+(areaofcircle 10)

@@ -1,0 +1,9 @@
+#lang racket
+
+(require plot)
+
+(plot (function (λ (x) (* x 2)))
+      #:x-min 0
+      #:x-max 100
+      #:y-min 0
+      #:y-max 1000
