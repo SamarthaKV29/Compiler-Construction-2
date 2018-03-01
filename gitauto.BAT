@@ -1,4 +1,4 @@
-GIT STATUS
+git status
 git add .
 git commit -m "upd"
 set /p branchname="Enter Branch"
