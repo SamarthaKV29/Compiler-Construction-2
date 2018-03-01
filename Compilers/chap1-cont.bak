@@ -1,3 +1,14 @@
 #lang racket
+(require racket/fixnum)
+(require "utilities.rkt")
 
 
+(define (parse input)
+  (write input)
+  )
+(define (r0 prog)
+  (parse prog))
+
+
+
+(r0 "x = 0; print x")
