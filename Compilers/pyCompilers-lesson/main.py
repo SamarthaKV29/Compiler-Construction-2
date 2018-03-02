@@ -103,10 +103,10 @@ def tokenize(stmts):
 def evaluate(pT):
     print parseTab
     return
-
+#Print the program for verification
 printProg(st) 
+#Print 
 tokenize(st)
-
 evaluate(parseTab)
 
 
