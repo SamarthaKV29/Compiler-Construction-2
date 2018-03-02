@@ -2,6 +2,12 @@ import os
 import re
 import regutil
 
+def printProg(stmts):
+    print "######################################################################################"
+    for row in stmts:
+        print row
+    print "######################################################################################"
+
 class ParseTabRow:
     def __init__(self, dT, vN, vVal, fN, fM):
         self.dtype = dT
@@ -58,11 +64,18 @@ def tokenize(stmts):
             if(len(val) == 1):
                 val = val.pop()
                 if(type(val) != type(0)):
-                    if(str(val).find("=")):
+                    val = str(val)
+
+                    if(val.find("=") == -1):
+                        val = str(val)
+                        parserow = ParseTabRow("var", val, None, None, None)
+                        parseTab.append(parserow.toList())
+                    elif(val.find("=") != -1):
                         val = str(val).strip(" ")
                         val = val.split("=")
                         parserow = ParseTabRow("var", str(val[0]), int(val[1]), None, None)
                         parseTab.append(parserow.toList())
+                    
                 else:
                     print "type error in statement ", list(stmts).index(stmt)
 
@@ -88,10 +101,12 @@ def tokenize(stmts):
             print "Invalid syntax in statement", list(stmts).index(stmt)+1
                 
 def evaluate(pT):
-    for row in pT:
-        print row
-        
+    print parseTab
+    return
+
+printProg(st) 
 tokenize(st)
+
 evaluate(parseTab)
 
 

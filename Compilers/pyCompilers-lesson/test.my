@@ -1,1 +1,1 @@
-var x = 0;disp(10);disp(x);disp("Hello")
+var x;var y = 0;disp(10);disp(x);disp("Hello")
