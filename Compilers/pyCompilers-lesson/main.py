@@ -32,7 +32,7 @@ def preprocess(programfile):
 
 
 st = preprocess("test.my")
-variables = {}
+
 
 def tokenize(stmts):
     for stmt in stmts:
@@ -40,19 +40,14 @@ def tokenize(stmts):
             val = re.findall("var (\w)", stmt)
             if(len(val) == 1):
                 val = val.pop()
-                variables[val] = None
+                print val
         elif(re.match("disp\((\w)\)", stmt)):
             val = re.findall("disp\((\w)\)", stmt)
             if(len(val) == 1):
                 val = val.pop()
-                if(val in variables):
-                    print variables[val]
-
                 
 
-            
-            
-
+        
 tokenize(st)
 print variables
 class ParseTabRow:
