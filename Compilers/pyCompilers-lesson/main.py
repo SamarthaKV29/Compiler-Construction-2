@@ -105,7 +105,7 @@ def evaluate(pT):
     return
 #Print the program for verification
 printProg(st) 
-#Print 
+#Generate the tokens
 tokenize(st)
 evaluate(parseTab)
 
